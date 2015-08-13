@@ -15,10 +15,10 @@ function checkers (color){
 }
 	
 function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
+    var letters = '016789AEF'.split('');
     var color = '#';
     for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
+        color += letters[Math.floor(Math.random() * 9)];
     }
     return color;
 }
@@ -26,10 +26,6 @@ function getRandomColor() {
 
 
 	for (i=0; i< 63; i++){
-		if (i % 2 === 0){
 			checkers(getRandomColor());
-		} else { 
-			checkers(getRandomColor());
-}
 }
 

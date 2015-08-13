@@ -14,27 +14,14 @@ function checkers (color){
 	bodyTime.appendChild(checker);
 }
 	
-function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-
 
 	for (i=0; i< 63; i++){
 		if (i % 2 === 0){
-			checkers(getRandomColor());
+			checkers('red');
 		} else { 
-			checkers(getRandomColor());
+			checkers('black');
 }
 }
 
-(function refreshMe(){
-	setTimeout(function(){
-		location.reload()
-	}, 500);
-})();
+
+

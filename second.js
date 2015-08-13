@@ -33,8 +33,3 @@ function getRandomColor() {
 }
 }
 
-(function refreshMe(){
-	setTimeout(function(){
-		location.reload()
-	}, 500);
-})();
