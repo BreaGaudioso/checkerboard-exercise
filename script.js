@@ -1,10 +1,4 @@
-/* Each tile should be a div
-Each tile's width is 11.1%
-Set each tile's float property to left
-Each tile's paddingBottom is 11.1% */
-
 function checkers (color){
-
 	var checker = document.createElement('div');
 	checker.style.backgroundColor= color;
 	checker.style.width = '11.1%';
@@ -13,28 +7,18 @@ function checkers (color){
 	var bodyTime = document.querySelectorAll('body')[0];
 	bodyTime.appendChild(checker);
 }
-	
-function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+
+var num = 150;
+
+for (i = 0; i < 63; i++) {
+	if (i % 2 === 0) {
+		var gradient = "rgb(100,100," + num + ")";
+		checkers(gradient)
+		num += 2;
+	} else {
+		var gradients = "rgb(100," + num + ", 100)";
+		checkers(gradients)
+		num += 2;
+	}
 }
 
-
-
-	for (i=0; i< 63; i++){
-		if (i % 2 === 0){
-			checkers(getRandomColor());
-		} else { 
-			checkers(getRandomColor());
-}
-}
-
-(function refreshMe(){
-	setTimeout(function(){
-		location.reload()
-	}, 500);
-})();
